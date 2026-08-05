@@ -104,7 +104,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
           <div className="lg:col-span-5 flex flex-col justify-between order-3">
             <div>
               {/* Chapter Tag */}
-              <div className="font-mono-accent text-[#8B0000] text-xs tracking-[0.25em] uppercase mb-3">
+              <div className="inline-block bg-[#8B0000] text-white px-3 py-1 font-mono-accent tracking-[0.25em] uppercase text-[11px] mb-3">
                 {product.chapter}
               </div>
 
@@ -114,7 +114,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
               </h1>
 
               {/* Tagline */}
-              <div className="font-mono-accent text-[#8B0000] text-xs tracking-[0.2em] uppercase mb-6">
+              <div className="inline-block bg-[#8B0000] text-white px-3 py-1 font-mono-accent tracking-[0.25em] uppercase text-[11px] mb-6">
                 {product.tagline}
               </div>
 
@@ -261,7 +261,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
           {/* BOTTOM SECTION: "YOU MAY ALSO LIKE" CAROUSEL (COMPACT HEIGHT) */}
           <div className="w-full pt-6 border-t border-white/10">
             <div className="flex items-center justify-between mb-4">
-              <div className="font-mono-accent text-xs text-[#8B0000] tracking-[0.25em] uppercase">
+              <div className="inline-block bg-[#8B0000] text-white px-3 py-1 font-mono-accent tracking-[0.25em] uppercase text-[11px]">
                 YOU MAY ALSO LIKE
               </div>
 

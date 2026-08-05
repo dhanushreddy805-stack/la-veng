@@ -111,7 +111,7 @@ export default function StorefrontHero() {
               {/* Chapter label with editorial line prefix */}
               <div className="flex items-center gap-3 mb-5">
                 <div className="w-8 h-[1px] bg-[#8B0000]" />
-                <span className="font-mono-accent text-[#8B0000] text-[11px] tracking-[0.3em] uppercase">
+                <span className="inline-block bg-[#8B0000] text-white px-3 py-1 font-mono-accent tracking-[0.25em] uppercase text-[11px]">
                   {activeSlide.chapter}
                 </span>
               </div>

@@ -33,7 +33,7 @@ const Hero = () => {
         <div className="flex-1 flex items-center">
           <div className="max-w-[1400px] mx-auto w-full px-6 md:px-12 grid md:grid-cols-12 gap-8 pt-32">
             <div className="md:col-span-8 lg:col-span-7">
-              <div className="animate-fade-up font-mono-accent text-[#8B0000] mb-8">
+              <div className="animate-fade-up inline-block bg-[#8B0000] text-white px-3 py-1 font-mono-accent tracking-[0.25em] uppercase text-[11px] mb-8">
                 Chapter 1 — Awakening
               </div>
               <h1 className="animate-fade-up-delay-1 font-serif text-5xl sm:text-7xl lg:text-8xl xl:text-9xl leading-[0.95] tracking-tighter mb-10">

@@ -76,7 +76,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 mb-20">
           {/* Column 1: Connect With Us */}
           <div className="md:col-span-4">
-            <div className="font-mono-accent text-[#8B0000] mb-6">Connect With Us</div>
+            <div className="inline-block bg-[#8B0000] text-white px-3 py-1 font-mono-accent tracking-[0.25em] uppercase text-[11px] mb-6">Connect With Us</div>
             <div className="space-y-3">
               <a
                 href="tel:+910000000000"
@@ -133,7 +133,7 @@ export default function Footer() {
 
           {/* Column 2: Order Support */}
           <div className="md:col-span-4">
-            <div className="font-mono-accent text-[#8B0000] mb-6">Order Support</div>
+            <div className="inline-block bg-[#8B0000] text-white px-3 py-1 font-mono-accent tracking-[0.25em] uppercase text-[11px] mb-6">Order Support</div>
             <div className="flex flex-col gap-3">
               <FooterLinkButton id="returns" label="Returns & Exchanges Within 48 Hours" onClick={setActiveModalId} />
               <FooterLinkButton id="refund" label="Refund / Exchange Policy" onClick={setActiveModalId} />
@@ -146,7 +146,7 @@ export default function Footer() {
 
           {/* Column 3: We Are LA VENGEANCE */}
           <div className="md:col-span-4">
-            <div className="font-mono-accent text-[#8B0000] mb-6">We Are LA VENGEANCE</div>
+            <div className="inline-block bg-[#8B0000] text-white px-3 py-1 font-mono-accent tracking-[0.25em] uppercase text-[11px] mb-6">We Are LA VENGEANCE</div>
             <div className="flex flex-col gap-3">
               <FooterLinkButton id="india" label="Crafted In India" onClick={setActiveModalId} />
               <FooterLinkButton id="collab" label="Collaborations" onClick={setActiveModalId} />
@@ -188,7 +188,7 @@ export default function Footer() {
             >
               <X size={18} />
             </button>
-            <div className="font-mono-accent text-[#8B0000] mb-2">LA Vengeance</div>
+            <div className="inline-block bg-[#8B0000] text-white px-3 py-1 font-mono-accent tracking-[0.25em] uppercase text-[11px] mb-2">LA Vengeance</div>
             <h4 className="font-serif text-xl text-white mb-4">{activeSection.title}</h4>
             <p className="text-white/80 leading-relaxed text-sm font-light">{activeSection.content}</p>
           </div>

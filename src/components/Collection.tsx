@@ -91,7 +91,7 @@ const Collection = () => {
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         <div className="flex items-end justify-between mb-16 md:mb-24 border-b border-white/10 pb-10">
           <div>
-            <div className="font-mono-accent text-[#8B0000] mb-6">
+            <div className="inline-block bg-[#8B0000] text-white px-3 py-1 font-mono-accent tracking-[0.25em] uppercase text-[11px] mb-6">
               The Essential Collection
             </div>
             <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl tracking-tighter max-w-xl leading-[1.05]">

@@ -37,7 +37,7 @@ const Newsletter = () => {
       </div>
       <div className="relative max-w-[1100px] mx-auto px-6 md:px-12 text-center">
         <div className="rounded-3xl border border-white/10 bg-[#0f0f0f]/60 backdrop-blur-md p-10 sm:p-14 md:p-20 shadow-2xl">
-          <div className="font-mono-accent text-[#8B0000] mb-8">Stay Connected</div>
+          <div className="inline-block bg-[#8B0000] text-white px-3 py-1 font-mono-accent tracking-[0.25em] uppercase text-[11px] mb-8">Stay Connected</div>
           <h2 className="font-serif text-5xl sm:text-6xl lg:text-7xl tracking-tighter leading-[1.05] mb-8">
             Enter the
             <br />
