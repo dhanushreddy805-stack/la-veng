@@ -27,8 +27,8 @@ const About = () => {
         </div>
 
         <div className="md:col-span-6 lg:col-span-7">
-          <div className="font-mono-accent text-[#8B0000] mb-8">
-            About The Brand
+          <div className="inline-block bg-[#8B0000] text-white px-3 py-1 font-mono-accent tracking-[0.25em] uppercase text-[11px] mb-8">
+            ABOUT THE BRAND
           </div>
           <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl tracking-tighter leading-[1.05] mb-10">
             Woven into
