@@ -4,10 +4,14 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ShoppingBag, Menu } from "lucide-react";
+import { useCartStore } from "@/store/cart";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
-  const [cartCount, setCartCount] = useState(0);
+  const { items, toggleCart } = useCartStore();
+  
+  // Calculate total items (quantity sum)
+  const cartCount = items.reduce((acc, item) => acc + item.quantity, 0);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 30);
@@ -79,7 +83,7 @@ export default function Header() {
             <Menu size={20} />
           </button>
           <button
-            onClick={() => alert("Cart feature active")}
+            onClick={toggleCart}
             className="relative group flex items-center gap-2 text-white/80 hover:text-white transition-colors"
           >
             <ShoppingBag size={18} strokeWidth={1.2} />

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Outfit, Cormorant_Garamond, Space_Mono } from "next/font/google";
 import "../globals.css";
+import CartDrawer from "@/components/CartDrawer";
 
 const outfit = Outfit({ 
   subsets: ["latin"], 
@@ -40,6 +41,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`${outfit.variable} ${cormorant.variable} ${spaceMono.variable} font-sans bg-[#050505] text-[#FAFAFA] antialiased selection:bg-[#8B0000] selection:text-white`}>
         {children}
+        <CartDrawer />
       </body>
     </html>
   );

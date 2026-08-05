@@ -18,6 +18,7 @@ import {
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { PRODUCTS_DATA, ProductDetail } from "@/data/products";
+import { useCartStore } from "@/store/cart";
 
 interface ProductDetailClientProps {
   product: ProductDetail;
@@ -28,6 +29,25 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
   const [selectedSize, setSelectedSize] = useState("M");
   const [quantity, setQuantity] = useState(1);
   const [activeTab, setActiveTab] = useState<"STORY" | "DETAILS" | "SHIPPING" | "RETURNS" | "CARE">("STORY");
+
+  const { addItem, openCart } = useCartStore();
+
+  const handleAddToCart = () => {
+    // Convert price string (e.g. "₹3,499") to number
+    const numericPrice = parseInt(product.price.replace(/[^0-9]/g, ""), 10);
+    
+    addItem({
+      productId: product.slug,
+      name: product.name,
+      price: numericPrice,
+      image: product.imageSrc,
+      size: selectedSize,
+      quantity: quantity,
+    });
+    
+    // Automatically open the cart drawer when adding
+    openCart();
+  };
 
   // Get other products for "YOU MAY ALSO LIKE"
   const otherProducts = Object.values(PRODUCTS_DATA).filter((p) => p.slug !== product.slug);
@@ -184,7 +204,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
               {/* Action Buttons */}
               <div className="grid grid-cols-2 gap-3.5 mb-10">
                 <button 
-                  onClick={() => alert(`Added ${quantity} x ${product.name} (Size ${selectedSize}) to bag.`)}
+                  onClick={handleAddToCart}
                   className="w-full bg-[#8B0000] hover:bg-[#a60000] text-white py-4 rounded-xl font-mono-accent text-xs tracking-[0.2em] uppercase transition-all duration-300 shadow-[0_8px_25px_rgba(139,0,0,0.4)] hover:shadow-[0_12px_30px_rgba(139,0,0,0.6)] active:scale-[0.99] whitespace-nowrap px-2 text-center cursor-pointer"
                 >
                   ADD TO BAG
