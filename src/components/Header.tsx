@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { ShoppingBag, Menu } from "lucide-react";
 
 export default function Header() {
@@ -52,8 +53,8 @@ export default function Header() {
 
         {/* Center Brand Logo with Winged V Emblem */}
         <div className="flex-1 flex justify-center">
-          <button
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          <Link
+            href="/"
             className="group flex items-center gap-3 font-serif text-lg md:text-xl tracking-[0.3em] text-white hover:text-[#8B0000] transition-colors duration-500 uppercase font-semibold"
           >
             <div className="relative w-6 h-6 md:w-7 md:h-7 transition-transform duration-500 group-hover:scale-110">
@@ -65,7 +66,7 @@ export default function Header() {
               />
             </div>
             <span>LA VENGEANCE</span>
-          </button>
+          </Link>
         </div>
 
         {/* Right Cart & Action trigger */}
